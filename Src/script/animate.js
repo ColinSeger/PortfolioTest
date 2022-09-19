@@ -6,16 +6,17 @@ $( document.body ).ready(function() {
         });
     });
     $(".project-container").click(function(){
-        if($(this).hasClass("project-click")){
-            $(this).removeClass("project-click");
+        if($(this).hasClass("animate-stage-2")){
+
         }
         else{
-            $("section").animate({
-                scrollTop: $(this).offset().top//TODO Fix fade out on scroll
-            }, 200);            
-            $(this).addClass("project-click");
+            if($(this).hasClass("project-click")){
+                $(this).removeClass("project-click");
+            }
+            else{           
+                $(this).addClass("project-click");
+            }            
         }
-        
     })
 });
 
