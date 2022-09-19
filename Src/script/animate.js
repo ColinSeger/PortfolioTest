@@ -1,5 +1,12 @@
 $( document.body ).ready(function() {
-    overflowAnimate($(".project-container"));
+    $(".project-container").each(function(i){
+        overflowAnimate($(this));
+    });
+    $(window).resize(function(){
+        $(".project-container").each(function(i){
+            overflowAnimate($(this));
+        });
+    });
     $("section").scroll(function(){
         $(".project-container").each(function(i){
             overflowAnimate($(this));
@@ -21,7 +28,7 @@ $( document.body ).ready(function() {
 });
 
 function overflowAnimate($this){
-    if($this.position().top < 150){
+    if($this.position().top < $("section").position().top + 10){
         $this.addClass("animate-stage-2");
         $this.removeClass("project-click");
         return $this;
