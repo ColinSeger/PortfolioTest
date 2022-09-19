@@ -1,0 +1,18 @@
+.project-container {
+    will-change: transform, opacity;
+    //animation-fill-mode: forwards;
+}
+.animate-stage-1 {
+    transform: scale(1);
+    opacity: 1;
+    width: 100%;
+}
+.animate-stage-2 {
+    transform: scale(0.7);
+    opacity: 0.4;
+    visibility: visible;
+    width: 100%;
+}
+.project-click {
+    height: 15rem;
+}
